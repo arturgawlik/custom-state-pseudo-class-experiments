@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>custom state pseudo elements experiments</title>
+</head>
+<body>
+    <style>
+        * {
+            color-scheme: dark;
+        }
+        
+        #btn-1, :state(stateOne) {
+            color: red;
+        }
+        #btn-2, :state(stateTwo) {
+            color: green;
+        }
+        #btn-3, :state(stateThree) {
+            color: deepskyblue;
+        }
+
+        .btns-container {
+            margin-top: 30px;
+        }
+    </style>
+    <my-custom-element></my-custom-element>
+    <div class="btns-container">
+        <button id="btn1">set "one" state</button>
+        <button id="btn2">set "two" state</button>
+        <button id="btn3">set "three" state</button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
